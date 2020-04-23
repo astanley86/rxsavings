@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.1'
 services:
   db:
     env_file: .env
@@ -17,5 +17,5 @@ services:
       dockerfile: ./docker/app/Dockerfile
     ports:
       - '7042:7042'
-    links:
+    depends_on: 
       - db
