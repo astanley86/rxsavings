@@ -4,7 +4,7 @@
 A quick and simple Node Express and ArangoDB application that runs with Docker.
 
 ### Initial Setup
-This application requires docker to be installed on your machine.  If you do not already have Docker installed, you can find the downloads here: <https://www.docker.com/products/docker-desktop>
+This application requires **docker** and **docker-compose** to be installed on your machine.  If you do not already have Docker installed, you can find the download instructions here: <https://www.docker.com/products/docker-desktop> and docker-compose here: <https://docs.docker.com/compose/install/>
 
 ### Running the Application
 1. Clone this repo
