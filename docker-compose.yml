@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  db:
+    env_file: .env
+    build: 
+      context: .
+      dockerfile: ./docker/db/Dockerfile
+      args:
+        ARANGO_ROOT_PASSWORD: ${ARANGO_ROOT_PASSWORD}
+        ARANGO_DB: ${ARANGO_DB}
+    ports:
+      - '8999:8529'
+  app:
+    env_file: .env    
+    build: 
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    ports:
+      - '7042:7042'
+    links:
+      - db
+    volumes: ['./:/usr/src/app']
